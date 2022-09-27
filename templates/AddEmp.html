@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Add Employee Information</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+		ody,
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			font-family: "Montserrat", sans-serif
+		}
+
+		.w3-row-padding img {
+			margin-bottom: 12px
+		}
+
+		.bgimg {
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-image: url('https://cc-employee.s3.amazonaws.com/good+vibes+only.jpg');
+			min-height: 100%;
+		}
+	</style>
+</head>
+>
+<body>
+<!-- Hidden Sidebar (reveals when clicked on menu icon)-->
+  <nav class="w3-sidebar w3-black w3-animate-right w3-xxlarge" style="display:none;padding-top:150px;right:0;z-index:2" id="mySidebar">
+	<a href="javascript:void(0)" onclick="closeNav()" class="w3-button w3-black w3-xxxlarge w3-display-topright" style="padding:0 12px;">
+	  <i class="fa fa-remove"></i>
+	</a>
+	<div class="w3-bar-block w3-center">
+	  <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Home</a>
+	  <a href="AddEmp.html" class="w3-bar-item w3-button w3-text-grey w3-hover-black" >Add Employee</a>
+	  <a href="#desc" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Description</a>
+	  <a href="#contact" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Contact</a>
+	</div>
+  </nav>
+<!-- Menu icon to open sidebar -->
+  <span class="w3-button w3-top w3-white w3-xxlarge w3-text-grey w3-hover-text-black" style="width:auto;right:0;" onclick="openNav()"><i class="fa fa-bars"></i></span>
+
+  
+<center>
+	<font color="black" size="4" style="font-family: avenir">
+
+		<h1 style="color: DodgerBlue">Employee Database</h1>
+
+		<body>
+
+			<form action="/addemp" autocomplete="on" method="POST" enctype="multipart/form-data">
+
+				<button type="submit" formaction="/getemp"
+					style="background: grey; color:white; font:oblique;">
+					GET EMPLOYEE INFORMATION</button><br><br>
+
+				Employee ID:<br> <input style="height:50px;font-size:14pt; color:grey;" type="number" name="emp_id"
+					autofocus size="40"><br><br>
+
+				First Name:<br> <input style="height:25px;font-size:14pt;color:grey;" type="text"
+					name="first_name"><br><br>
+
+				Last Name:<br> <input style="height:25px;font-size:14pt;color:grey;" type="text"
+					name="last_name"><br><br>
+
+				Primary Skills:<br> <input style="height:25px;font-size:14pt;color:grey;" type="text"
+					name="pri_skill"><br><br>
+
+				Location:<br> <input style="height:25px;font-size:14pt;color:grey;" type="text" name="location"><br><br>
+
+				Image: <input type=file name="emp_image_file" style="height:25px;font-size:14pt;color:grey;"> <br><br>
+
+				<button type="submit"
+					style="background: grey; height: 45px; width: 200px; color: white; size: 5; font:oblique;">UPDATE
+					DATABASE</button>
+			</form>
+			<a href="/about">About Us</a>
+		</body>
+
+	</font>
+</center>
+
+<script>
+function openNav() {
+  document.getElementById("mySidebar").style.width = "30%";
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function closeNav() {
+	document.getElementById("mySidebar").style.display = "none";
+  }
+</script>
+</body>
+</html>
